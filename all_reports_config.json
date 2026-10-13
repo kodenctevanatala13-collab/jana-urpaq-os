@@ -1,0 +1,620 @@
+﻿[
+    {
+        "id":  "rep_mentor_compass",
+        "title":  "Ежедневный отчёт наставника «Вечерний Компас»",
+        "roleId":  "mentors",
+        "roleName":  "Наставник команды",
+        "supervisorRole":  "senior_mentor",
+        "supervisorTitle":  "Старший наставник",
+        "kind":  "daily",
+        "time":  "22:00",
+        "days":  [
+                     1,
+                     2,
+                     3,
+                     4,
+                     5,
+                     6,
+                     7
+                 ],
+        "deadline":  "Ежедневно строго до 22:00",
+        "urgencyHoursBefore":  1,
+        "why":  "Передача объективной картины дня команды Старшему наставнику до начала ночной планёрки.",
+        "howTo":  [
+                      "1. Заполнить после завершения Свечки и сдачи гаджетов в сейф-бокс.",
+                      "2. Оценить энергию команды и качество ритуала \u0027Время порядка\u0027 (уборки).",
+                      "3. Обязательно указать детей из \u0027Зоны внимания\u0027 (слезы, замкнутость, конфликт) для психолога."
+                  ],
+        "fields":  [
+                       {
+                           "key":  "teamNumber",
+                           "label":  "Номер команды",
+                           "type":  "number",
+                           "required":  true
+                       },
+                       {
+                           "key":  "energy",
+                           "label":  "Энергия и сплоченность команды (1-5)",
+                           "type":  "score5",
+                           "required":  true
+                       },
+                       {
+                           "key":  "cleanScore",
+                           "label":  "Чистота комнат (Время порядка) (1-5)",
+                           "type":  "score5",
+                           "required":  true
+                       },
+                       {
+                           "key":  "candleDone",
+                           "label":  "Ритуал «Свечка» проведен по регламенту",
+                           "type":  "yesno",
+                           "required":  true
+                       },
+                       {
+                           "key":  "phonesLocked",
+                           "label":  "Телефоны заперты в сейф-боксе команды",
+                           "type":  "yesno",
+                           "required":  true
+                       },
+                       {
+                           "key":  "starOfDay",
+                           "label":  "Герой дня команды (кто совершил прорыв)",
+                           "type":  "text",
+                           "required":  true
+                       },
+                       {
+                           "key":  "redFlags",
+                           "label":  "Красные флаги и зона внимания (ФИО детей, трудности)",
+                           "type":  "longtext",
+                           "required":  true
+                       }
+                   ],
+        "templateDoc":  "Шаблоны отчетов команды после потока/Отчет (шаблон) наставника после смены.docx"
+    },
+    {
+        "id":  "rep_senior_morning",
+        "title":  "Чек-лист «Утро Командира»",
+        "roleId":  "senior_mentor",
+        "roleName":  "Старший наставник",
+        "supervisorRole":  "head_training",
+        "supervisorTitle":  "Рук. Тренингового отдела",
+        "kind":  "daily",
+        "time":  "09:00",
+        "days":  [
+                     1,
+                     2,
+                     3,
+                     4,
+                     5,
+                     6,
+                     7
+                 ],
+        "deadline":  "Ежедневно до 09:00",
+        "urgencyHoursBefore":  1,
+        "why":  "Гарантия полной готовности наставнического корпуса к подъему и завтраку без срывов расписания.",
+        "howTo":  [
+                      "1. Проверить выход всех наставников на зарядку в 07:30.",
+                      "2. Сверить готовность тренинговых площадок с координатором.",
+                      "3. Утвердить тайминг дня."
+                  ],
+        "fields":  [
+                       {
+                           "key":  "mentorsReady",
+                           "label":  "Все наставники на постах вовремя",
+                           "type":  "yesno",
+                           "required":  true
+                       },
+                       {
+                           "key":  "weatherNotice",
+                           "label":  "Погодные условия и выбор площадок (улица/зал)",
+                           "type":  "text",
+                           "required":  true
+                       },
+                       {
+                           "key":  "morningBriefing",
+                           "label":  "Ключевой фокус и девиз сегодняшнего дня",
+                           "type":  "longtext",
+                           "required":  true
+                       }
+                   ],
+        "templateDoc":  "Шаблоны отчетов команды после потока/Отчет (шаблон) ст.наставника после смены.docx"
+    },
+    {
+        "id":  "rep_senior_night_briefing",
+        "title":  "Протокол ночной планерки и решений штаба",
+        "roleId":  "senior_mentor",
+        "roleName":  "Старший наставник",
+        "supervisorRole":  "head_training",
+        "supervisorTitle":  "Рук. Тренингового отдела",
+        "kind":  "daily",
+        "time":  "23:45",
+        "days":  [
+                     1,
+                     2,
+                     3,
+                     4,
+                     5,
+                     6,
+                     7
+                 ],
+        "deadline":  "Ежедневно до 23:45",
+        "urgencyHoursBefore":  1,
+        "why":  "Сведение всех отчетов дня, назначение ответственных за кризисные случаи до наступления утра.",
+        "howTo":  [
+                      "1. Собрать планёрку в 22:30 после получения всех Вечерних Компасов.",
+                      "2. Разобрать динамику команд, заслушать психолога и медика.",
+                      "3. Сформировать решения и отправить РТО."
+                  ],
+        "fields":  [
+                       {
+                           "key":  "generalPulse",
+                           "label":  "Общий пульс потока (1-10)",
+                           "type":  "score10",
+                           "required":  true
+                       },
+                       {
+                           "key":  "keyIncidents",
+                           "label":  "Зафиксированные инциденты и принятые меры",
+                           "type":  "longtext",
+                           "required":  true
+                       },
+                       {
+                           "key":  "tomorrowAdjustments",
+                           "label":  "Корректировки в программу на завтра",
+                           "type":  "longtext",
+                           "required":  true
+                       }
+                   ],
+        "templateDoc":  "Шаблоны отчетов команды после потока/Отчет (шаблон) ст.наставника после смены.docx"
+    },
+    {
+        "id":  "rep_medic_triage",
+        "title":  "Журнал обращений Триаж и санитарный отчет",
+        "roleId":  "medic",
+        "roleName":  "Медицинский работник",
+        "supervisorRole":  "coordinator",
+        "supervisorTitle":  "Координатор смены",
+        "kind":  "daily",
+        "time":  "21:30",
+        "days":  [
+                     1,
+                     2,
+                     3,
+                     4,
+                     5,
+                     6,
+                     7
+                 ],
+        "deadline":  "Ежедневно до 21:30",
+        "urgencyHoursBefore":  1,
+        "why":  "Передача Координатору полной картины состояния здоровья детей до вечерней планерки.",
+        "howTo":  [
+                      "1. Свести количество обращений за день по степеням триажа.",
+                      "2. Указать детей в изоляторе (если есть).",
+                      "3. Подтвердить соблюдение протокола \u0027Без таблеток\u0027."
+                  ],
+        "fields":  [
+                       {
+                           "key":  "totalCases",
+                           "label":  "Общее число обращений за день",
+                           "type":  "number",
+                           "required":  true
+                       },
+                       {
+                           "key":  "greenCases",
+                           "label":  "Зеленый уровень (мелкие ссадины/жалобы)",
+                           "type":  "number",
+                           "required":  true
+                       },
+                       {
+                           "key":  "yellowCases",
+                           "label":  "Желтый уровень (наблюдение/температура)",
+                           "type":  "number",
+                           "required":  true
+                       },
+                       {
+                           "key":  "redCases",
+                           "label":  "Красный уровень (экстренные/травмы)",
+                           "type":  "number",
+                           "required":  true
+                       },
+                       {
+                           "key":  "medicNotes",
+                           "label":  "Пояснения по сложным случаям и рекомендации",
+                           "type":  "longtext",
+                           "required":  true
+                       }
+                   ],
+        "templateDoc":  "БЕЗОПАСНОСТЬ/Журнал учета травматизма.docx"
+    },
+    {
+        "id":  "rep_psychologist_screening",
+        "title":  "Скрининг тревожности и динамика группы риска",
+        "roleId":  "psychologist",
+        "roleName":  "Психолог смены",
+        "supervisorRole":  "chief_psychologist",
+        "supervisorTitle":  "Главный психолог проекта",
+        "kind":  "daily",
+        "time":  "22:15",
+        "days":  [
+                     1,
+                     2,
+                     3,
+                     4,
+                     5,
+                     6,
+                     7
+                 ],
+        "deadline":  "Ежедневно до 22:15",
+        "urgencyHoursBefore":  1,
+        "why":  "Супервизорский контроль психологического фона смены Главным психологом.",
+        "howTo":  [
+                      "1. Провести мониторинг адаптации (особенно Дни 1-3).",
+                      "2. Зафиксировать проведенные индивидуальные и командные беседы.",
+                      "3. Дать рекомендации на ночную планерку."
+                  ],
+        "fields":  [
+                       {
+                           "key":  "riskGroupCount",
+                           "label":  "Количество детей на индивидуальном контроле",
+                           "type":  "number",
+                           "required":  true
+                       },
+                       {
+                           "key":  "consultationsDone",
+                           "label":  "Проведено индивидуальных консультаций",
+                           "type":  "number",
+                           "required":  true
+                       },
+                       {
+                           "key":  "teamClimate",
+                           "label":  "Психологический климат в коллективе наставников",
+                           "type":  "longtext",
+                           "required":  true
+                       },
+                       {
+                           "key":  "psychologistAdvice",
+                           "label":  "Рекомендации старшему наставнику на завтра",
+                           "type":  "longtext",
+                           "required":  true
+                       }
+                   ],
+        "templateDoc":  "Шаблоны отчетов команды после потока/Отчет (шаблон) психолога потока после лагеря.docx"
+    },
+    {
+        "id":  "rep_coordinator_sanitation",
+        "title":  "Сводка бытового контроля базы и санитарии",
+        "roleId":  "coordinator",
+        "roleName":  "Координатор смены",
+        "supervisorRole":  "coo",
+        "supervisorTitle":  "Операционный директор",
+        "kind":  "daily",
+        "time":  "21:00",
+        "days":  [
+                     1,
+                     2,
+                     3,
+                     4,
+                     5,
+                     6,
+                     7
+                 ],
+        "deadline":  "Ежедневно до 21:00",
+        "urgencyHoursBefore":  1,
+        "why":  "Контроль выполнения базовых стандартов чистоты, питания и безопасности.",
+        "howTo":  [
+                      "1. Свести данные 3-часовых проверок санузлов и душевых.",
+                      "2. Зафиксировать качество и объем горячего питания столовой.",
+                      "3. Проверить работу охраны на КПП."
+                  ],
+        "fields":  [
+                       {
+                           "key":  "hotWaterStatus",
+                           "label":  "Горячее водоснабжение и тепло в норме",
+                           "type":  "yesno",
+                           "required":  true
+                       },
+                       {
+                           "key":  "mealsQuality",
+                           "label":  "Питание (5-разовое, доступность добавок)",
+                           "type":  "score5",
+                           "required":  true
+                       },
+                       {
+                           "key":  "sanitationViolations",
+                           "label":  "Бытовые сбои, поломки и принятые меры с базой",
+                           "type":  "longtext",
+                           "required":  true
+                       }
+                   ],
+        "templateDoc":  "Шаблоны отчетов команды после потока/Отчет (шаблон координатора после смены.docx"
+    },
+    {
+        "id":  "rep_mentor_final",
+        "title":  "Итоговый отчет наставника и реестр ИПР",
+        "roleId":  "mentors",
+        "roleName":  "Наставник команды",
+        "supervisorRole":  "senior_mentor",
+        "supervisorTitle":  "Старший наставник",
+        "kind":  "final",
+        "time":  "",
+        "days":  [
+
+                 ],
+        "deadline":  "В течение 2 дней после",
+        "urgencyHoursBefore":  24,
+        "why":  "Подведение итогов личностной трансформации каждого ребенка команды и сдача ИПР для родителей.",
+        "howTo":  [
+                      "1. Заполнить финальные срезы Колеса баланса (Точка Б).",
+                      "2. Сформировать ИПР по каждому ребенку.",
+                      "3. Сдать на утверждение Старшему наставнику."
+                  ],
+        "fields":  [
+                       {
+                           "key":  "teamTransformation",
+                           "label":  "Главный командный результат (от \u0027я\u0027 к \u0027мы\u0027)",
+                           "type":  "longtext",
+                           "required":  true
+                       },
+                       {
+                           "key":  "iprReadyCount",
+                           "label":  "Количество полностью оформленных ИПР",
+                           "type":  "number",
+                           "required":  true
+                       }
+                   ],
+        "templateDoc":  "Шаблоны отчетов команды после потока/Отчет (шаблон) наставника после смены.docx"
+    },
+    {
+        "id":  "rep_senior_final",
+        "title":  "Итоговый отчет Старшего наставника смены",
+        "roleId":  "senior_mentor",
+        "roleName":  "Старший наставник",
+        "supervisorRole":  "head_training",
+        "supervisorTitle":  "Рук. Тренингового отдела",
+        "kind":  "final",
+        "time":  "",
+        "days":  [
+
+                 ],
+        "deadline":  "В течение 2 дней после",
+        "urgencyHoursBefore":  24,
+        "why":  "Анализ групповой динамики потока, аттестация работы наставников и кадровые выводы.",
+        "howTo":  [
+                      "1. Оценить сплоченность всех команд потока.",
+                      "2. Дать оценку каждому наставнику по шкале грейдов.",
+                      "3. Выделить топ-3 побед и точки роста программы."
+                  ],
+        "fields":  [
+                       {
+                           "key":  "streamScore",
+                           "label":  "Итоговая сплоченность потока (1-10)",
+                           "type":  "score10",
+                           "required":  true
+                       },
+                       {
+                           "key":  "topSuccesses",
+                           "label":  "Топ-3 главные победы смены",
+                           "type":  "longtext",
+                           "required":  true
+                       },
+                       {
+                           "key":  "mentorsEvaluation",
+                           "label":  "Оценка наставнического корпуса и кандидаты в Школу лидеров",
+                           "type":  "longtext",
+                           "required":  true
+                       }
+                   ],
+        "templateDoc":  "Шаблоны отчетов команды после потока/Отчет (шаблон) ст.наставника после смены.docx"
+    },
+    {
+        "id":  "rep_trainer_final",
+        "title":  "Итоговый отчет Тренера смены",
+        "roleId":  "trainer",
+        "roleName":  "Тренер потока",
+        "supervisorRole":  "head_training",
+        "supervisorTitle":  "Рук. Тренингового отдела",
+        "kind":  "final",
+        "time":  "",
+        "days":  [
+
+                 ],
+        "deadline":  "В течение 2 дней после",
+        "urgencyHoursBefore":  24,
+        "why":  "Методологическая обратная связь по тренингам и динамике инсайтов.",
+        "howTo":  [
+                      "1. Оценить вовлеченность детей в катарсис-тренинги.",
+                      "2. Зафиксировать предложения по доработке упражнений и реквизита.",
+                      "3. Сдать отчет РТО."
+                  ],
+        "fields":  [
+                       {
+                           "key":  "engagementScore",
+                           "label":  "Уровень вовлеченности детей в тренинги (1-10)",
+                           "type":  "score10",
+                           "required":  true
+                       },
+                       {
+                           "key":  "methodologyFeedback",
+                           "label":  "Что сработало на 100%, а что требует доработки",
+                           "type":  "longtext",
+                           "required":  true
+                       },
+                       {
+                           "key":  "proposedChanges",
+                           "label":  "3 главных изменения в методику следующего потока",
+                           "type":  "longtext",
+                           "required":  true
+                       }
+                   ],
+        "templateDoc":  "Шаблоны отчетов команды после потока/Отчет (шаблон) тренеру после смены.docx"
+    },
+    {
+        "id":  "rep_coordinator_final",
+        "title":  "Итоговый отчет Координатора смены",
+        "roleId":  "coordinator",
+        "roleName":  "Координатор смены",
+        "supervisorRole":  "coo",
+        "supervisorTitle":  "Операционный директор",
+        "kind":  "final",
+        "time":  "",
+        "days":  [
+
+                 ],
+        "deadline":  "В течение 2 дней после",
+        "urgencyHoursBefore":  24,
+        "why":  "Закрытие финансовых подотчетов, оценка базы размещения и материальной базы.",
+        "howTo":  [
+                      "1. Провести аудит базы размещения (пригодность для будущих сезонов).",
+                      "2. Сдать финансовые чеки и остатки реквизита на склад.",
+                      "3. Передать отчет Операционному директору."
+                  ],
+        "fields":  [
+                       {
+                           "key":  "baseRating",
+                           "label":  "Оценка базы отдыха (стоит ли возвращаться) (1-10)",
+                           "type":  "score10",
+                           "required":  true
+                       },
+                       {
+                           "key":  "financeClosure",
+                           "label":  "Финансовые остатки, подотчет и чеки сданы",
+                           "type":  "yesno",
+                           "required":  true
+                       },
+                       {
+                           "key":  "incidentsSummary",
+                           "label":  "Критические инциденты и факапы потока",
+                           "type":  "longtext",
+                           "required":  true
+                       }
+                   ],
+        "templateDoc":  "Шаблоны отчетов команды после потока/Отчет (шаблон координатора после смены.docx"
+    },
+    {
+        "id":  "rep_psychologist_final",
+        "title":  "Итоговый психологический портрет потока",
+        "roleId":  "psychologist",
+        "roleName":  "Психолог смены",
+        "supervisorRole":  "chief_psychologist",
+        "supervisorTitle":  "Главный психолог проекта",
+        "kind":  "final",
+        "time":  "",
+        "days":  [
+
+                 ],
+        "deadline":  "В течение 3 дней после",
+        "urgencyHoursBefore":  24,
+        "why":  "Обобщение динамики группы риска и методические выводы психологической службы.",
+        "howTo":  [
+                      "1. Свести статистику консультаций и эмоционального прогресса.",
+                      "2. Сформировать рекомендации для постлагерного сопровождения семей.",
+                      "3. Передать Главному психологу."
+                  ],
+        "fields":  [
+                       {
+                           "key":  "consultationsSummary",
+                           "label":  "Общее число сессий и часов индивидуальной работы",
+                           "type":  "text",
+                           "required":  true
+                       },
+                       {
+                           "key":  "riskGroupOutcomes",
+                           "label":  "Динамика детей группы риска (сдвиг в Точку Б)",
+                           "type":  "longtext",
+                           "required":  true
+                       },
+                       {
+                           "key":  "parentRecommendationsSummary",
+                           "label":  "Ключевые системные рекомендации для родителей",
+                           "type":  "longtext",
+                           "required":  true
+                       }
+                   ],
+        "templateDoc":  "Шаблоны отчетов команды после потока/Отчет (шаблон) психолога потока после лагеря.docx"
+    },
+    {
+        "id":  "rep_chief_psychologist_final",
+        "title":  "Сводный отчет Главного психолога проекта",
+        "roleId":  "chief_psychologist",
+        "roleName":  "Главный психолог проекта",
+        "supervisorRole":  "founder",
+        "supervisorTitle":  "Основатель",
+        "kind":  "final",
+        "time":  "",
+        "days":  [
+
+                 ],
+        "deadline":  "В течение 1 недели после",
+        "urgencyHoursBefore":  48,
+        "why":  "Стратегический отчет руководству о психологической безопасности и квалификации команды.",
+        "howTo":  [
+                      "1. Оцифровать нагрузку всех психологов потоков.",
+                      "2. Провести посткемп-дебрифинг службы.",
+                      "3. Передать отчет Основателю."
+                  ],
+        "fields":  [
+                       {
+                           "key":  "totalSessions",
+                           "label":  "Сводная статистика сессий (дети / родители / наставники)",
+                           "type":  "text",
+                           "required":  true
+                       },
+                       {
+                           "key":  "teamPsychologicalHealth",
+                           "label":  "Оценка выгорания и устойчивости наставнического корпуса",
+                           "type":  "longtext",
+                           "required":  true
+                       },
+                       {
+                           "key":  "serviceDevelopment",
+                           "label":  "План развития психологической службы на следующий поток",
+                           "type":  "longtext",
+                           "required":  true
+                       }
+                   ],
+        "templateDoc":  "Шаблоны отчетов команды после потока/Отчет Гл.психолога.docx"
+    },
+    {
+        "id":  "rep_rto_passport",
+        "title":  "Паспорт Потока: Часть 2 (Проведение и результаты)",
+        "roleId":  "head_training",
+        "roleName":  "Рук. Тренингового отдела",
+        "supervisorRole":  "founder",
+        "supervisorTitle":  "Основатель",
+        "kind":  "final",
+        "time":  "",
+        "days":  [
+
+                 ],
+        "deadline":  "В течение 2 недель после",
+        "urgencyHoursBefore":  48,
+        "why":  "Комплексное архивирование образовательных результатов и аналитики сезона.",
+        "howTo":  [
+                      "1. Свести аналитику входных и выходных анкет (NPS, ценности).",
+                      "2. Провести посткемп-дебрифинг Start-Stop-Continue.",
+                      "3. Сдать Паспорт потока Основателю."
+                  ],
+        "fields":  [
+                       {
+                           "key":  "overallNps",
+                           "label":  "Итоговый NPS потока (удовлетворенность родителей и детей)",
+                           "type":  "text",
+                           "required":  true
+                       },
+                       {
+                           "key":  "keyTransformations",
+                           "label":  "Главные доказанные кейсы трансформации детей",
+                           "type":  "longtext",
+                           "required":  true
+                       },
+                       {
+                           "key":  "startStopContinueSummary",
+                           "label":  "Сводные выводы Start — Stop — Continue",
+                           "type":  "longtext",
+                           "required":  true
+                       }
+                   ],
+        "templateDoc":  "Шаблоны отчетов команды после потока/Отчеты руководителя ТО.docx"
+    }
+]
